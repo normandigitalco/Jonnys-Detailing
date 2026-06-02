@@ -30,7 +30,6 @@
 (function(){
   function setVh(){document.documentElement.style.setProperty('--vh',(window.innerHeight*0.01)+'px');}
   setVh();
-  window.addEventListener('resize',function(){setVh();},{passive:true});
   window.addEventListener('orientationchange',function(){setTimeout(setVh,400);},{passive:true});
 })();
 </script>
@@ -63,7 +62,7 @@
   --ease:cubic-bezier(.4,0,.2,1);
   --rad:12px;
 }
-html{scroll-behavior:auto;overscroll-behavior-y:none}
+html{scroll-behavior:auto}
 body{background:var(--bg);color:var(--text);font-family:var(--B);font-weight:300;line-height:1.6;overflow-x:hidden;overscroll-behavior-y:auto;-webkit-overflow-scrolling:touch}
 a,button,[onclick]{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 a{color:inherit;text-decoration:none}
@@ -589,7 +588,7 @@ footer{background:#080706;border-top:1px solid rgba(245,200,66,0.1);padding:clam
         <!-- Free text — no card, no border, just content -->
         <div class="about-split-text reveal">
           <div class="eyebrow"><div class="eyebrow-bar"></div><span style="color:rgba(240,235,226,0.5)">Who We Are</span></div>
-          <h2 style="font-family:var(--R);font-weight:900;font-size:clamp(1.8rem,3.5vw,3rem);text-transform:uppercase;letter-spacing:-1px;line-height:.95;color:var(--text);margin:10px 0 20px">From Bugattis<br>to Daily Drivers &mdash;<br>We Do It All.</h2>
+          <h2 style="font-family:var(--R);font-weight:900;font-size:clamp(1.8rem,3.5vw,3rem);text-transform:uppercase;letter-spacing:-1px;line-height:.95;color:var(--text);margin:10px 0 20px">Mobile Detailing,<br>Done Right.</h2>
           <p style="font-size:14px;color:var(--text2);line-height:1.85;margin-bottom:14px">Jonny's is a mobile operation out of Orange County. We come to you &mdash; fully loaded, seven days a week. No drop-offs, no waiting, no excuses.</p>
           <p style="font-size:14px;color:var(--text2);line-height:1.85;margin-bottom:28px">We've worked on LaFerraris, Bugatti Chirons, Brabus G-Wagons, Rolls-Royces &mdash; and everything in between. Every car gets the same care. Every single time.</p>
           <div style="display:flex;gap:clamp(20px,4vw,44px);margin-bottom:32px;flex-wrap:wrap">
